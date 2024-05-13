@@ -18,13 +18,11 @@
       template:
         src: nginx.conf
         dest: /etc/nginx/sites-available/default
-        notify: Restart Nginx
     - name: Enable new site
       file:
         src: /etc/nginx/sites-available/default
         dest: /etc/nginx/sites-enabled/default
         state: link
-        notify: Restart Nginx
     - name: Allow all access to tcp port 80
       ufw:
         rule: allow

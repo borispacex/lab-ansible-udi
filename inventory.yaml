@@ -1,0 +1,4 @@
+webservers:
+  hosts:
+    aws:
+      ansible_host: 3.16.46.197 #ip publica
